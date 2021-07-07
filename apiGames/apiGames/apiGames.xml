@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>apiGames</name>
+    </assembly>
+    <members>
+        <member name="M:apiGames.Controllers.GamesController.GetList(System.Int32,System.Int32)">
+            <summary>
+            Search and show all registered games
+            </summary>
+            <remarks>It is not possible to return games without pagination</remarks>
+            <param name="page">Shows the number of the page under consult. Min: 1</param>
+            <param name="quantity">Determines the number of games per page. Min: 1 - Max: 50</param>
+            <response code="200">Returns the game list</response>
+            <response code="204">In case of there is no game to show</response>
+        </member>
+        <member name="M:apiGames.Controllers.GamesController.Get(System.Guid)">
+            <summary>
+            Search a game by its Id
+            </summary>
+            <param name="id">Searcher game's Id</param>
+            <response code="200">Returns the searched game</response>
+            <response code="204">In case of there is no game with this Id</response>
+        </member>
+        <member name="M:apiGames.Controllers.GamesController.InsertGame(apiGames.Models.GameInputModel)">
+            <summary>
+            Insert a new game
+            </summary>
+            <param name="gameInputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:apiGames.Controllers.GamesController.UpdateGame(System.Guid,apiGames.Models.GameInputModel)">
+            <summary>
+            Update a registered game
+            </summary>
+            <param name="id"></param>
+            <param name="gameInputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:apiGames.Controllers.GamesController.PriceUpdate(System.Guid,System.Double)">
+            <summary>
+            Updates only a game's price
+            </summary>
+            <param name="id"></param>
+            <param name="price"></param>
+            <returns></returns>
+        </member>
+        <member name="M:apiGames.Controllers.GamesController.DeleteGame(System.Guid)">
+            <summary>
+            Delete a registered game
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
